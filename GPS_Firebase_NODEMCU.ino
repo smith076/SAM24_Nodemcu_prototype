@@ -25,6 +25,10 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance.
   
 SoftwareSerial gpsSerial(4,5);    //RX-D1 TX-D2
 TinyGPSPlus gps;    //gps object
+void testfunction(){
+  int a=1,b=2;
+  int sum=a+b;
+}
 void rfidsaman(){
   if ( ! mfrc522.PICC_IsNewCardPresent()) 
   {
@@ -74,7 +78,7 @@ void setup() {
 }
 
 void loop() {
-  
+  testfunction();
   if (Firebase.failed()) {  
       Serial.print("setting /number failed:");  
       Serial.println(Firebase.error());    
